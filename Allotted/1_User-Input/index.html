@@ -1,0 +1,57 @@
+<div id="mainContent">
+    <div id="baseBox">
+        <h2>Enter Base Box Dimensions</h2>
+        <table>
+            <tr>
+                <th>Height</th>
+                <td><input type="number" id="baseLength" required /></td>
+            </tr>
+            <tr>
+                <th>Width</th>
+                <td><input type="number" id="baseWidth" required /></td>
+            </tr>
+            <tr>
+                <th>Length</th>
+                <td><input type="number" id="baseHeight" required /></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="inputForm">
+        <h2>Enter Box Information</h2>
+        <form id="boxForm">
+            <table id="boxTable">
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Name</th>
+                        <th>Length</th>
+                        <th>Width</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                        <th>Quantity</th>
+                        <th>Fragile</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="boxes">
+                    <tr class="boxInput">
+                        <td class="order">1</td>
+                        <td><input type="text" id="boxName0" required /></td>
+                        <td><input type="number" id="length0" required /></td>
+                        <td><input type="number" id="width0" required /></td>
+                        <td><input type="number" id="height0" required /></td>
+                        <td><input type="number" id="weight0" required /></td>
+                        <td><input type="number" id="quantity0" required /></td>
+                        <td><select id="fragile0" required>
+                                <option value="false">Not Fragile</option>
+                                <option value="true">Fragile</option>
+                            </select></td>
+                        <td><button type="button" class="deleteBtn"><i class='bx bx-trash'></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" id="addBoxBtn"><i class='bx bx-plus'></i> Add Another Box</button>
+            <button type="button" id="calculateBtn"><i class='bx bx-calculator'></i> Calculate</button>
+        </form>
+    </div>

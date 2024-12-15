@@ -1,0 +1,346 @@
+/* Packed Boxes Info Styles */
+#packedBoxesInfo {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+
+    height: 85%;
+    width: 250px;
+
+    background: linear-gradient(180deg, #f4f3ff 0%, #bab2eb 100%);
+    color: #2d3748;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.477);
+    backdrop-filter: blur(10px);
+
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.packedBoxInfo {
+    background: white;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #6366f1;
+    transition: transform 0.2s;
+}
+
+.packedBoxInfo:hover {
+    transform: translateX(5px);
+}
+
+.packedBoxInfo strong {
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+.packedBoxInfo span {
+    color: #64748b;
+}
+
+/* End of Packed Boxes Info Styles */
+
+/* space */
+.space-stats {
+    /* background: linear-gradient(90deg, #494bbb, #7ba9ff); */
+    background: linear-gradient(90deg, #8157ff, #9e9eff);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.space-stats h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* End of space */
+
+/* start please */
+.box.show {
+    display: flex;
+    /* Make visible when active */
+    opacity: 1;
+    /* Fade in effect */
+    transform: translateY(0);
+    /* Reset slide effect */
+}
+
+.box {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: rgb(255, 248, 254);
+
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+
+    display: none;
+    /* Default hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Add transition */
+    opacity: 0;
+    /* Default invisible */
+    transform: translateY(20px);
+    /* Start position for slide effect */
+}
+
+.cover {
+    top: 0;
+    position: absolute;
+    background: linear-gradient(180deg, #ebeff5, #e3e9f1);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    /* -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.168); */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.box:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+
+    -webkit-box-shadow: 1px 1px 12px #3b83f6b8;
+    box-shadow: 1px 1px 12px #3b83f6ac;
+}
+
+.box:hover {
+
+    -webkit-box-shadow: 1px 1px 12px #483bf6a3;
+    box-shadow: 1px 1px 12px #573bf6a9;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin: 5px;
+}
+
+.cover__image {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    /* Ensures the image fits entirely inside the container */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers text horizontally */
+    justify-content: center; /* Centers text vertically */
+    height: 100%; /* Ensure it fills the box */
+    text-align: center; /* Aligns text inside each `<p>` */
+    padding: 10px; /* Optional: Adds padding for spacing */
+    box-sizing: border-box;
+    color: #4736c4;
+}   
+/* End of please */
+
+/* start transition */
+#packedBoxesInfo,
+#unplacedBoxesInfo,
+#space {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    /* Start hidden */
+    transform: translateY(-20px);
+    /* Slide up effect */
+}
+
+.packedBoxInfo.show,
+#packedBoxesInfo.show,
+#unplacedBoxesInfo.show,
+#space.show {
+    opacity: 1;
+    transform: translateY(0);
+    /* Reset slide-up effect */
+}
+
+#packedBoxesInfo {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#packedBoxesInfo.show {
+    opacity: 1;
+}
+/* End of transition */
+
+
+/* Switch Styles */
+.display-info {
+    color: #2d3748;
+    font-size: 14px;
+    text-align: right;
+    position: fixed;
+    top: 22px;
+    right: 75px;
+    z-index: 1000;
+}
+
+.switch {
+    --switch-width: 46px;
+    --switch-height: 24px;
+    --switch-bg: rgb(131, 131, 131);
+    --switch-checked-bg: rgb(0, 218, 80);
+    --switch-offset: calc((var(--switch-height) - var(--circle-diameter)) / 2);
+    --switch-transition: all .2s cubic-bezier(0.27, 0.2, 0.25, 1.51);
+    --circle-diameter: 18px;
+    --circle-bg: #fff;
+    --circle-shadow: 1px 1px 2px rgba(146, 146, 146, 0.45);
+    --circle-checked-shadow: -1px 1px 2px rgba(163, 163, 163, 0.45);
+    --circle-transition: var(--switch-transition);
+    --icon-transition: all .2s cubic-bezier(0.27, 0.2, 0.25, 1.51);
+    --icon-cross-color: var(--switch-bg);
+    --icon-cross-size: 6px;
+    --icon-checkmark-color: var(--switch-checked-bg);
+    --icon-checkmark-size: 10px;
+    --effect-width: calc(var(--circle-diameter) / 2);
+    --effect-height: calc(var(--effect-width) / 2 - 1px);
+    --effect-bg: var(--circle-bg);
+    --effect-border-radius: 1px;
+    --effect-transition: all .2s ease-in-out;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch {
+    display: inline-block;
+}
+
+.switch svg {
+    transition: var(--icon-transition);
+    position: absolute;
+    height: auto;
+}
+
+.switch .checkmark {
+    width: var(--icon-checkmark-size);
+    color: var(--icon-checkmark-color);
+    transform: scale(0);
+}
+
+.switch .cross {
+    width: var(--icon-cross-size);
+    color: var(--icon-cross-color);
+}
+
+.slider {
+    box-sizing: border-box;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    background: var(--switch-bg);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: var(--switch-transition);
+    cursor: pointer;
+}
+
+.circle {
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    background: var(--circle-bg);
+    border-radius: inherit;
+    box-shadow: var(--circle-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--circle-transition);
+    z-index: 1;
+    position: absolute;
+    left: var(--switch-offset);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: var(--effect-width);
+    height: var(--effect-height);
+    left: calc(var(--switch-offset) + (var(--effect-width) / 2));
+    background: var(--effect-bg);
+    border-radius: var(--effect-border-radius);
+    transition: var(--effect-transition);
+}
+
+/* Actions */
+.switch input:checked+.slider {
+    background: var(--switch-checked-bg);
+}
+
+.switch input:checked+.slider .checkmark {
+    transform: scale(1);
+}
+
+.switch input:checked+.slider .cross {
+    transform: scale(0);
+}
+
+.switch input:checked+.slider::before {
+    left: calc(100% - var(--effect-width) - (var(--effect-width) / 2) - var(--switch-offset));
+}
+
+.switch input:checked+.slider .circle {
+    left: calc(100% - var(--circle-diameter) - var(--switch-offset));
+    box-shadow: var(--circle-checked-shadow);
+}
+
+/* End of Switch Styles */

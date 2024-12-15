@@ -1,0 +1,170 @@
+/* Button Styles */
+button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: white;
+    font-weight: 400;
+    font-family: "Prompt", serif;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px -1px rgb(0 0 0 / 0.2);
+}
+
+button:disabled {
+    background: #555555;
+    color: #aaaaaa;
+    cursor: not-allowed;
+}
+/* End of Button Styles */
+
+
+/* Number Input Form */
+input[type="number"],
+input[type="text"],
+select {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 2px solid #cbd4e0;
+    /* Default border */
+    box-sizing: border-box;
+    border-radius: 4px;
+    /* Optional: smoother corners */
+    transition: all 0.4s ease;
+    /* Smooth focus effect */
+}
+
+#boxForm .boxInput input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    background-color: white;
+}
+/* End of Number Input Form */
+
+
+/* Select Dropdown Styles */
+select {
+    width: 120px;
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background: #2a2a2a;
+    color: white;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+select:focus {
+    outline: none;
+    background: #343434;
+}
+/* End of Select Dropdown Styles */
+
+
+/* Base Table Styles */
+#baseBox table {
+    color: aliceblue;
+    background-color: #e5dbff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#baseBox th,
+#baseBox td {
+    font-weight: 450;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #c9c9c9;
+}
+
+#baseBox th {
+    padding: 16px;
+    width: 30%;
+    background-color: #8157ff;
+}
+
+#baseBox input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #cbd4e0;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+}
+
+#baseBox input:focus {
+    outline: none;
+    border-color: #5d3bf6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+/* End of Base Table Styles */
+
+
+
+/* Box Infomation Table Styles */
+#boxTable {
+    color: #000;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#boxTable th,
+#boxTable td {
+    border: 1px solid #c9c9c9;
+    /*#312f4ba1*/
+    padding: 10px;
+    text-align: center;
+}
+
+#boxTable th {
+    background-color: #3078ff;
+    color: aliceblue;
+    font-weight: 450;
+}
+
+table {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #d9f2ff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#boxTable input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #cbd4e0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+/* End of Box Infomation Table Styles */
+
+
+
+/* Delete Button Styles */
+.deleteBtn {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    padding: 8px 16px;
+}
+
+.deleteBtn:hover {
+    background-color: #c0392b;
+}
+/* End of Delete Button Styles */
